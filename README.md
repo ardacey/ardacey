@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋 I'm Arda</h1>
-<h3 align="center">Computer Engineering Student · Android Developer · AI Enthusiast</h3>
+<h3 align="center">Computer Engineering Student · Software Developer </h3>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/arda-ceylan/" target="_blank">
@@ -17,13 +17,10 @@
 
 I'm a **Computer Engineering student** who enjoys building things that actually work and feel good to use.
 
-Most of my time goes into:
-- 📱 Developing clean and modern **Android apps** with **Kotlin** and **Jetpack Compose**
+- 📱 Developing clean and modern **Mobile apps** with **React Native** and **Jetpack Compose**
 - 🤖 Experimenting with **AI, Machine Learning, LLMs, and AI agents**
 - 🌐 Building backend & web systems with **FastAPI**, **React**, and real-time technologies
 - 🧠 Learning by building — especially in areas like **multimodal AI** and **agent-based systems**
-
-I like exploring new tools, breaking things, fixing them, and learning along the way.
 
 ---
 
@@ -71,17 +68,11 @@ Some projects I really enjoyed working on:
 - 👽 **Rick and Morty App**  
   A simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
 
-👉 *More projects are pinned below.*
-
 ---
 
 ## 🎵 Currently Vibing To
 
-> Coding goes better with good music 🎧
-
 [![Spotify](https://img.shields.io/badge/Spotify-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/track/YOUR_TRACK_ID)
-
-*(You can replace this with your favorite song or a playlist)*
 
 ---
 
@@ -125,13 +116,7 @@ Some projects I really enjoyed working on:
 
 - 💼 **LinkedIn:** https://www.linkedin.com/in/arda-ceylan/
 - 📧 **Email:** ac.ardaceylan@gmail.com
-- 🐙 **GitHub:** https://github.com/ardacey
 
 ---
 
-I'm always open to:
-- 🚀 Internships
-- 🤝 AI & mobile collaborations
-- 💡 Interesting side projects
-
-Thanks for stopping by — happy coding! ✨
+Happy coding! ✨
