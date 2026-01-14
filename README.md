@@ -70,12 +70,6 @@ Some projects I really enjoyed working on:
 
 ---
 
-## 🎵 Currently Vibing To
-
-[![Spotify](https://img.shields.io/badge/Spotify-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/track/YOUR_TRACK_ID)
-
----
-
 <p align="center">
   <img
     src="https://github-readme-stats-fast.vercel.app/api?username=ardacey&show_icons=true&theme=radical"
