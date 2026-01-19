@@ -1,6 +1,12 @@
 <h1 align="center">Hi 👋 I'm Arda</h1>
 <h3 align="center">Computer Engineering Student · Software Developer </h3>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
+  <img alt="github contribution grid snake animation" src="dist/github-snake.svg" />
+</picture>
+
 <p align="center">
   <a href="https://www.linkedin.com/in/arda-ceylan/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white" />
@@ -85,17 +91,6 @@ Some projects I really enjoyed working on:
     src="https://github-readme-stats-fast.vercel.app/api/streak?username=ardacey&theme=radical"
   />
 </p>
-
----
-
-## 📊 Contributions
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github contribution grid snake animation" src="dist/github-snake.svg" />
-</picture>
-
 
 ---
 
