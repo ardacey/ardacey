@@ -5,6 +5,9 @@
   </picture>
 </p>
 <!-- MUSIC:START -->
+<p align="center">
+  <a href="https://www.last.fm/user/ardacey"><img src="assets/music.svg" alt="Last played on Spotify, via Last.fm" /></a>
+</p>
 <!-- MUSIC:END -->
 
 <h1 align="center">Hi 👋 I'm Arda</h1>
