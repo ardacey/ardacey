@@ -97,6 +97,7 @@ def main():
             print(f'Last.fm failed, leaving the pill unchanged: {e}', file=sys.stderr)
             return
         if not track:
+            print(f'No scrobbles yet for Last.fm user {USER!r}, nothing to show', file=sys.stderr)
             return
     title, artist, cover_url = track
     svg = build(title, artist, cover_b64(cover_url) if cover_url else None)
