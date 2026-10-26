@@ -71,23 +71,20 @@ I'm a **Software Engineer** who enjoys building things that actually work and fe
 
 Some projects I really enjoyed working on:
 
-- **Lexo**  
-  A real-time multiplayer word game built with **React**, **FastAPI**, and **WebSockets**. Focused on performance and competitive gameplay.
+<p align="center">
+  <a href="https://github.com/ardacey/Lexo"><img src="assets/cards/lexo.svg" alt="Lexo: real-time multiplayer word game (React, FastAPI, WebSockets)" width="400" /></a>
+  <a href="https://github.com/ardacey/Audify"><img src="assets/cards/audify.svg" alt="Audify: agent-based AI app that turns images and videos into music (LangGraph, Streamlit)" width="400" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/ardacey/Text-to-Music-Image"><img src="assets/cards/text-to-music.svg" alt="Text-to-Music-Image: generates music from text or visual prompts" width="400" /></a>
+  <a href="https://github.com/ardacey/Stock-Price-Prediction-And-Forecasting-Using-LSTM"><img src="assets/cards/stock-lstm.svg" alt="Stock Price Forecasting: LSTM time-series forecasting" width="400" /></a>
+</p>
 
-- **Audify**  
-  An agent-based AI application that turns images and videos into emotionally-driven music using **LangGraph**, **Streamlit**, and multimodal models.
+More projects:
 
-- **Text-to-Music-Image**  
-  A creative AI project that generates music from text or visual prompts.
-
-- **Indian Bird Species Classification**  
-  A CNN-based image classification system trained on 25 bird species.
-
-- **Stock Price Forecasting (LSTM)**  
-  Time-series forecasting using LSTM networks to analyze market trends.
-
-- **Rick and Morty App**  
-  A simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
+- [**Gait Analysis Site**](https://github.com/ardacey/Gait-Analysis-Site): a web app for rehabilitation gait analysis with in-browser pose estimation, joint-angle graphs and a 3D skeleton view, built with **React**, **TypeScript**, **TensorFlow.js** and **Supabase**.
+- [**Indian Bird Species Classification**](https://github.com/ardacey/Image-Classification-System-for-Indian-Bird-Species): a CNN-based image classification system trained on 25 bird species.
+- [**Rick and Morty App**](https://github.com/ardacey/Rick-and-Morty-App): a simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/stats-dark-mobile.svg" />
