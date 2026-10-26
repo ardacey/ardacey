@@ -1,5 +1,8 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Anime-style illustration of Arda on a rainy neon street in Tokyo at night" width="100%" />
+</p>
+
 <h1 align="center">Hi 👋 I'm Arda</h1>
-<h3 align="center">Computer Engineering Student · Software Developer </h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
@@ -21,7 +24,7 @@
 
 ## 👋 About Me
 
-I'm a **Computer Engineering student** who enjoys building things that actually work and feel good to use.
+I'm a **Software Engineer** who enjoys building things that actually work and feel good to use.
 
 - 📱 Developing clean and modern **Mobile apps** with **React Native** and **Jetpack Compose**
 - 🤖 Experimenting with **AI, Machine Learning, LLMs, and AI agents**
