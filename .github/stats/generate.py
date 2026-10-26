@@ -35,23 +35,56 @@ QUERY = '''query($login: String!) {
   }
 }'''
 
-def fetch():
-    body = json.dumps({'query': QUERY, 'variables': {'login': USER}}).encode()
+# commits in a date window, per repository (windows stay under 100 days, so no paging)
+REPO_COMMITS = '''query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository { nameWithOwner }
+        contributions(first: 100) { nodes { occurredAt commitCount } }
+      }
+    }
+  }
+}'''
+
+def graphql(query, **variables):
+    body = json.dumps({'query': query, 'variables': {'login': USER, **variables}}).encode()
     req = urllib.request.Request('https://api.github.com/graphql', data=body, headers={
         'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=30) as r:
         data = json.load(r)
     if 'errors' in data:
         raise RuntimeError(data['errors'])
-    user = data['data']['user']
+    return data['data']['user']
+
+def automated_commits(first, last):
+    """Commits to this profile repo per day. The daily workflows commit here as the
+    owner, which would otherwise show up as an endless streak."""
+    profile = f'{USER}/{USER}'.lower()
+    counts, start = {}, first
+    while start <= last:
+        end = min(start + timedelta(days=89), last)
+        coll = graphql(REPO_COMMITS, **{'from': f'{start}T00:00:00Z', 'to': f'{end}T23:59:59Z'})['contributionsCollection']
+        for repo in coll['commitContributionsByRepository']:
+            if repo['repository']['nameWithOwner'].lower() == profile:
+                for n in repo['contributions']['nodes']:
+                    day = date.fromisoformat(n['occurredAt'][:10])
+                    counts[day] = counts.get(day, 0) + n['commitCount']
+        start = end + timedelta(days=1)
+    return counts
+
+def fetch():
+    user = graphql(QUERY)
     cal = user['contributionsCollection']['contributionCalendar']
     days = [(date.fromisoformat(d['date']), d['contributionCount'])
             for w in cal['weeks'] for d in w['contributionDays']]
+    auto = automated_commits(days[0][0], days[-1][0])
+    days = [(d, max(0, c - auto.get(d, 0))) for d, c in days]
     sizes = {}
     for repo in user['repositories']['nodes']:
         for e in repo['languages']['edges']:
             sizes[e['node']['name']] = sizes.get(e['node']['name'], 0) + e['size']
-    return cal['totalContributions'], days, sizes
+    return sum(c for _, c in days), days, sizes
 
 def demo():
     random.seed(3)
