@@ -11,7 +11,7 @@
   <img src="assets/lights.svg" alt="Night skyline with a passing train; some windows are lit by visitors" width="100%" />
 </p>
 <!-- LIGHTS:START -->
-<p align="center"><sub>The city is dark. <a href="https://github.com/ardacey">follow</a> or <a href="https://github.com/ardacey/ardacey">⭐ star</a> to light the first window</sub></p>
+<p align="center"><sub>121 windows lit by <a href="https://github.com/ghostworker13">@ghostworker13</a>, <a href="https://github.com/arpitrajjj">@arpitrajjj</a>, <a href="https://github.com/shinobi-coder701">@shinobi-coder701</a>, <a href="https://github.com/MJ-ulia">@MJ-ulia</a>, <a href="https://github.com/dejaadre-boop">@dejaadre-boop</a> and 116 more · <a href="https://github.com/ardacey">follow</a> or <a href="https://github.com/ardacey/ardacey">⭐ star</a> to light yours</sub></p>
 <!-- LIGHTS:END -->
 
 <p align="center">
