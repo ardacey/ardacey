@@ -88,19 +88,8 @@ Some projects I really enjoyed working on:
 </picture>
 
 <p align="center">
-  <img
-    src="https://github-readme-stats-fast.vercel.app/api?username=ardacey&show_icons=true&theme=tokyonight"
-    height="180"
-  />
-  <img
-    src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=ardacey&layout=compact&theme=tokyonight&size_weight=0.5&count_weight=0.5"
-    height="180"
-  />
-</p>
-<p align="center">
-  <img
-    src="https://github-readme-stats-fast.vercel.app/api/streak?username=ardacey&theme=tokyonight"
-  />
+  <img src="assets/stats/activity.svg" alt="Contribution activity over the last 12 months" width="400" />
+  <img src="assets/stats/languages.svg" alt="Most used languages in public repositories" width="400" />
 </p>
 
 <picture>
