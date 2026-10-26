@@ -1,0 +1,10 @@
+{
+  "boss_index": 0,
+  "defeated": 0,
+  "max_hp": 500,
+  "hp": 500,
+  "damage": {},
+  "recent": [],
+  "hall": [],
+  "hits": 0
+}

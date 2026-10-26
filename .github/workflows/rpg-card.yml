@@ -1,0 +1,39 @@
+name: RPG Card
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # her gun 03:17 UTC
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/rpg_card.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-commits
+  cancel-in-progress: false
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Karti uret
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/rpg_card.py --user "${{ github.repository_owner }}"
+
+      - name: Degisiklik varsa commit'le
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/rpg-card.svg
+          git diff --cached --quiet || git commit -m "chore: RPG karti guncellendi"
+          for i in 1 2 3; do git pull --rebase && git push && break || sleep 3; done
