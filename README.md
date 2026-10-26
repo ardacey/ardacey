@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Anime-style illustration of Arda on a rainy neon street in Tokyo at night" width="100%" />
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/banner-mobile.svg" />
+    <img src="assets/banner.svg" alt="Anime-style illustration of Arda on a rainy neon street in Tokyo at night" width="100%" />
+  </picture>
 </p>
 
 <h1 align="center">Hi 👋 I'm Arda</h1>
@@ -21,6 +24,8 @@
 </p>
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/about-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/headers/about-light-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="assets/headers/about-dark.svg" />
   <img alt="About Me" src="assets/headers/about-light.svg" width="100%" />
 </picture>
@@ -33,6 +38,8 @@ I'm a **Software Engineer** who enjoys building things that actually work and fe
 - Learning by building — especially in areas like **multimodal AI** and **agent-based systems**
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/stack-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/headers/stack-light-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="assets/headers/stack-dark.svg" />
   <img alt="Tech Stack" src="assets/headers/stack-light.svg" width="100%" />
 </picture>
@@ -56,6 +63,8 @@ I'm a **Software Engineer** who enjoys building things that actually work and fe
 </div>
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/projects-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/headers/projects-light-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="assets/headers/projects-dark.svg" />
   <img alt="Featured Projects" src="assets/headers/projects-light.svg" width="100%" />
 </picture>
@@ -81,6 +90,8 @@ Some projects I really enjoyed working on:
   A simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/stats-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/headers/stats-light-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="assets/headers/stats-dark.svg" />
   <img alt="GitHub Stats" src="assets/headers/stats-light.svg" width="100%" />
 </picture>
@@ -102,6 +113,8 @@ Some projects I really enjoyed working on:
 </p>
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/connect-dark-mobile.svg" />
+  <source media="(max-width: 600px)" srcset="assets/headers/connect-light-mobile.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="assets/headers/connect-dark.svg" />
   <img alt="Connect With Me" src="assets/headers/connect-light.svg" width="100%" />
 </picture>
