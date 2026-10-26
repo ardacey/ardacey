@@ -1,0 +1,32 @@
+name: Update Music
+
+on:
+  schedule:
+    - cron: "23 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  music:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch last played track
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_USER: ardacey
+        run: python .github/music/generate.py
+
+      - name: Push music pill
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: update last played"
+          add: "assets/music.svg"
+          default_author: github_actions
