@@ -4,6 +4,8 @@
     <img src="assets/banner.svg" alt="Anime-style illustration of Arda on a rainy neon street in Tokyo at night" width="100%" />
   </picture>
 </p>
+<!-- MUSIC:START -->
+<!-- MUSIC:END -->
 
 <h1 align="center">Hi 👋 I'm Arda</h1>
 

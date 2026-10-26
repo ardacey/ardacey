@@ -1,5 +1,6 @@
 """Builds assets/music.svg: a small "last played" pill fed by Last.fm
 (Spotify scrobbles there). Runs hourly from .github/workflows/music.yml.
+The pill is added to README.md (between the MUSIC markers) once there is a track.
 
 Text is drawn by the viewer's browser (not converted to paths) so song titles
 in any script, Japanese included, render properly.
@@ -9,7 +10,7 @@ Env:
   LASTFM_USER     Last.fm user (default: ardacey)
   MUSIC_DEMO      "title|artist" to render without calling the API
 """
-import base64, json, os, sys, urllib.parse, urllib.request
+import base64, json, os, re, sys, urllib.parse, urllib.request
 from xml.sax.saxutils import escape
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -103,6 +104,14 @@ def main():
     svg = build(title, artist, cover_b64(cover_url) if cover_url else None)
     with open(os.path.join(REPO, 'assets', 'music.svg'), 'w') as f:
         f.write(svg)
+    readme = os.path.join(REPO, 'README.md')
+    s = open(readme).read()
+    pill = (f'<p align="center">\n  <a href="https://www.last.fm/user/{USER}"><img src="assets/music.svg" '
+            'alt="Last played on Spotify, via Last.fm" /></a>\n</p>')
+    s = re.sub(r'(<!-- MUSIC:START -->\n)(?:.*?\n)?(<!-- MUSIC:END -->)',
+               lambda m: m.group(1) + pill + '\n' + m.group(2), s, flags=re.S)
+    with open(readme, 'w') as f:
+        f.write(s)
     print('last played:', title, '-', artist)
 
 if __name__ == '__main__':
