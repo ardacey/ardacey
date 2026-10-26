@@ -1,0 +1,32 @@
+name: Update Banner
+
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate banner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pip install pillow==12.3.0 fonttools==4.67.0
+          python .github/banner/generate.py
+
+      - name: Push banner
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "chore: update banner"
+          add: "assets/banner.svg assets/banner-mobile.svg"
