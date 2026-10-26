@@ -1,12 +1,14 @@
-name: Light a Window
+name: Light the City
 
 on:
-  issues:
-    types: [opened]
+  schedule:
+    - cron: "17 * * * *"   # new followers
+  watch:
+    types: [started]       # new stars, right away
+  workflow_dispatch:
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
   group: lights
@@ -14,7 +16,6 @@ concurrency:
 
 jobs:
   light:
-    if: startsWith(github.event.issue.title, 'light:')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,23 +24,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Light a window for the visitor
+      - name: Light windows for followers and stargazers
         env:
-          LOGIN: ${{ github.event.issue.user.login }}
-        run: python .github/lights/generate.py "$LOGIN"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/lights/generate.py
 
       - name: Push city
         uses: EndBug/add-and-commit@v9
         with:
-          message: "chore: light a window"
+          message: "chore: light the city"
           add: "assets/lights.svg README.md .github/lights/visitors.json"
           default_author: github_actions
-
-      - name: Reply and close
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NUMBER: ${{ github.event.issue.number }}
-          REPO: ${{ github.repository }}
-        run: |
-          gh issue comment "$NUMBER" --repo "$REPO" --body "A window in the city is now lit in your name. Thanks for stopping by 🏮"
-          gh issue close "$NUMBER" --repo "$REPO"

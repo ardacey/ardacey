@@ -1,13 +1,14 @@
 """Builds assets/lights.svg: a night skyline with a passing train, where every
-visitor who opened a "light: window" issue gets a window lit in their name.
+follower and stargazer of the profile gets a window lit in their name.
 
 Also rewrites the visitor line in README.md between the LIGHTS markers.
+Runs hourly and on every new star from .github/workflows/lights.yml.
 
-Usage:
-  python generate.py              rebuild from visitors.json
-  python generate.py <login>      add a visitor (once per login), then rebuild
+Env:
+  GITHUB_TOKEN   token for the GitHub API (optional, raises the rate limit)
+  LIGHTS_OFFLINE rebuild from visitors.json without calling the API
 """
-import json, os, random, re, sys
+import json, os, random, re, sys, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
@@ -16,6 +17,7 @@ OWNER = 'ardacey'
 W, H = 1024, 220
 DECK = 150            # top of the elevated railway
 WARM = '#ffcf7a'      # visitor windows
+LOGIN = re.compile(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})')
 
 def load():
     try:
@@ -24,15 +26,31 @@ def load():
     except FileNotFoundError:
         return []
 
-def add(login):
-    if not re.fullmatch(r'[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})', login) or login.endswith('[bot]'):
-        raise SystemExit(f'not a valid GitHub login: {login!r}')
+def api_logins(path):
+    logins, page = [], 1
+    while True:
+        req = urllib.request.Request(f'https://api.github.com{path}?per_page=100&page={page}',
+                                     headers={'Accept': 'application/vnd.github+json'})
+        if os.environ.get('GITHUB_TOKEN'):
+            req.add_header('Authorization', 'Bearer ' + os.environ['GITHUB_TOKEN'])
+        with urllib.request.urlopen(req, timeout=30) as r:
+            batch = json.load(r)
+        logins += [u['login'] for u in batch if u.get('type') == 'User']
+        if len(batch) < 100:
+            return logins
+        page += 1
+
+def sync():
+    """Append new followers and stargazers. Lit windows stay lit, in their place."""
     visitors = load()
-    if login.lower() not in (v.lower() for v in visitors):
-        visitors.append(login)
-        with open(VISITORS, 'w') as f:
-            json.dump(visitors, f, indent=1)
-            f.write('\n')
+    known = {v.lower() for v in visitors}
+    for login in api_logins(f'/users/{OWNER}/followers') + api_logins(f'/repos/{OWNER}/{OWNER}/stargazers'):
+        if LOGIN.fullmatch(login) and login.lower() not in known and login.lower() != OWNER:
+            visitors.append(login)
+            known.add(login.lower())
+    with open(VISITORS, 'w') as f:
+        json.dump(visitors, f, indent=1)
+        f.write('\n')
     return visitors
 
 # ---------- skyline ----------
@@ -164,18 +182,24 @@ def build(visitors):
     return '\n'.join(o)
 
 def readme_line(visitors):
-    link = (f'https://github.com/{OWNER}/{OWNER}/issues/new?title=light%3A+window'
-            '&body=Just+press+%22Submit+new+issue%22.+A+window+in+the+city+will+light+up+in+your+name.')
+    follow, star = f'https://github.com/{OWNER}', f'https://github.com/{OWNER}/{OWNER}'
+    how = f'<a href="{follow}">follow</a> or <a href="{star}">⭐ star</a>'
     if not visitors:
-        return f'<p align="center"><sub>The city is dark. <a href="{link}">Light the first window</a></sub></p>'
+        return f'<p align="center"><sub>The city is dark. {how} to light the first window</sub></p>'
     names = ', '.join(f'<a href="https://github.com/{v}">@{v}</a>' for v in reversed(visitors[-5:]))
     more = f' and {len(visitors) - 5} more' if len(visitors) > 5 else ''
     n = len(visitors)
-    return (f'<p align="center"><sub>{n} window{"s" if n != 1 else ""} lit by visitors: {names}{more} · '
-            f'<a href="{link}">light a window</a></sub></p>')
+    return f'<p align="center"><sub>{n} window{"s" if n != 1 else ""} lit by {names}{more} · {how} to light yours</sub></p>'
 
 def main():
-    visitors = add(sys.argv[1]) if len(sys.argv) > 1 else load()
+    if os.environ.get('LIGHTS_OFFLINE'):
+        visitors = load()
+    else:
+        try:
+            visitors = sync()
+        except Exception as e:  # keep the city as it is rather than breaking it
+            print(f'GitHub API failed, leaving the city unchanged: {e}', file=sys.stderr)
+            return
     with open(os.path.join(REPO, 'assets', 'lights.svg'), 'w') as f:
         f.write(build(visitors))
     readme = os.path.join(REPO, 'README.md')
@@ -184,7 +208,7 @@ def main():
                lambda m: m.group(1) + readme_line(visitors) + '\n' + m.group(2), s, flags=re.S)
     with open(readme, 'w') as f:
         f.write(s)
-    print(len(visitors), 'visitors')
+    print(len(visitors), 'lit windows')
 
 if __name__ == '__main__':
     main()

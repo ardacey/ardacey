@@ -11,7 +11,7 @@
   <img src="assets/lights.svg" alt="Night skyline with a passing train; some windows are lit by visitors" width="100%" />
 </p>
 <!-- LIGHTS:START -->
-<p align="center"><sub>The city is dark. <a href="https://github.com/ardacey/ardacey/issues/new?title=light%3A+window&body=Just+press+%22Submit+new+issue%22.+A+window+in+the+city+will+light+up+in+your+name.">Light the first window</a></sub></p>
+<p align="center"><sub>The city is dark. <a href="https://github.com/ardacey">follow</a> or <a href="https://github.com/ardacey/ardacey">⭐ star</a> to light the first window</sub></p>
 <!-- LIGHTS:END -->
 
 <p align="center">
