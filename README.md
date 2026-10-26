@@ -77,14 +77,8 @@ Some projects I really enjoyed working on:
 </p>
 <p align="center">
   <a href="https://github.com/ardacey/Text-to-Music-Image"><img src="assets/cards/text-to-music.svg" alt="Text-to-Music-Image: generates music from text or visual prompts" width="400" /></a>
-  <a href="https://github.com/ardacey/Stock-Price-Prediction-And-Forecasting-Using-LSTM"><img src="assets/cards/stock-lstm.svg" alt="Stock Price Forecasting: LSTM time-series forecasting" width="400" /></a>
+  <a href="https://github.com/ardacey/Gait-Analysis-Site"><img src="assets/cards/gait-analysis.svg" alt="Gait Analysis Site: rehabilitation gait-analysis web app (React, TensorFlow.js, Supabase)" width="400" /></a>
 </p>
-
-More projects:
-
-- [**Gait Analysis Site**](https://github.com/ardacey/Gait-Analysis-Site): a web app for rehabilitation gait analysis with in-browser pose estimation, joint-angle graphs and a 3D skeleton view, built with **React**, **TypeScript**, **TensorFlow.js** and **Supabase**.
-- [**Indian Bird Species Classification**](https://github.com/ardacey/Image-Classification-System-for-Indian-Bird-Species): a CNN-based image classification system trained on 25 bird species.
-- [**Rick and Morty App**](https://github.com/ardacey/Rick-and-Morty-App): a simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/stats-dark-mobile.svg" />
