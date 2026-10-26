@@ -7,11 +7,12 @@
 
 <h1 align="center">Hi 👋 I'm Arda</h1>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github contribution grid snake animation" src="dist/github-snake.svg" />
-</picture>
+<p align="center">
+  <img src="assets/lights.svg" alt="Night skyline with a passing train; some windows are lit by visitors" width="100%" />
+</p>
+<!-- LIGHTS:START -->
+<p align="center"><sub>The city is dark. <a href="https://github.com/ardacey/ardacey/issues/new?title=light%3A+window&body=Just+press+%22Submit+new+issue%22.+A+window+in+the+city+will+light+up+in+your+name.">Light the first window</a></sub></p>
+<!-- LIGHTS:END -->
 
 <p align="center">
   <a href="https://www.linkedin.com/in/arda-ceylan/" target="_blank">
@@ -44,23 +45,10 @@ I'm a **Software Engineer** who enjoys building things that actually work and fe
   <img alt="Tech Stack" src="assets/headers/stack-light.svg" width="100%" />
 </picture>
 
-<div align="center">
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/websocket.png" alt="websocket" title="websocket"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png" alt="Git" title="Git"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/github.png" alt="GitHub" title="GitHub"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/gitlab.png" alt="GitLab" title="GitLab"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/firebase.png" alt="Firebase" title="Firebase"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/javascript.png" alt="JavaScript" title="JavaScript"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" title="React"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="TypeScript" title="TypeScript"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/java.png" alt="Java" title="Java"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/kotlin.png" alt="Kotlin" title="Kotlin"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/python.png" alt="Python" title="Python"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/streamlit.png" alt="Streamlit" title="Streamlit"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/fastapi.png" alt="FastAPI" title="FastAPI"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/android.png" alt="Android" title="Android"/></code>
-	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/langchain_icon.png" alt="LangChain" title="LangChain"/></code>
-</div>
+<p align="center">
+  <img src="assets/stack/stack-ai-backend.svg" alt="AI / ML: Python, LangGraph, LangChain, Streamlit. Backend: FastAPI, WebSockets, Firebase, Java" width="400" />
+  <img src="assets/stack/stack-mobile-web.svg" alt="Mobile: Kotlin, Jetpack Compose, React Native, Android. Web &amp; tools: React, TypeScript, JavaScript, Git" width="400" />
+</p>
 
 <picture>
   <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/headers/projects-dark-mobile.svg" />
