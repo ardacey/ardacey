@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/banner.svg" width="900" alt="Sakura gecesi banner"/>
-</p>
-
 <h1 align="center">Hi 👋 I'm Arda</h1>
 <h3 align="center">Computer Engineering Student · Software Developer </h3>
 
@@ -19,16 +15,6 @@
     <img src="https://img.shields.io/badge/Email-red?logo=gmail&logoColor=white" />
   </a>
   <img src="https://komarev.com/ghpvc/?username=ardacey&style=flat&color=blue" />
-</p>
-
----
-
-## 🧙 Character Sheet
-
-> Profilim bir anime RPG karakteri: seviyem commit, yıldız, repo ve takipçi sayımdan hesaplanıyor. Kart her gün otomatik güncelleniyor.
-
-<p align="center">
-  <img src="assets/rpg-card.svg" width="640" alt="Anime RPG karakter kartı"/>
 </p>
 
 ---
@@ -87,51 +73,6 @@ Some projects I really enjoyed working on:
 
 - 👽 **Rick and Morty App**  
   A simple and clean Android app consuming the Rick and Morty API with **Kotlin**.
-
----
-
-## 👾 Boss Fight
-
-> Her ziyaretçi savaşabilir! **SALDIR** linkine tıkla, açılan issue'yu oluştur; bir bot hasarını hesaplayıp boss'un canını düşürür. Boss ölünce daha güçlüsü gelir.
-
-<!--START_SECTION:boss-->
-<p align="center"><img src="https://raw.githubusercontent.com/ardacey/ardacey/main/assets/boss.svg?v=1793002946" width="640" alt="Bug Golem"/></p>
-
-<p align="center"><a href="https://github.com/ardacey/ardacey/issues/new?title=boss%3A%20attack&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder."><b>⚔️ SALDIR!</b></a> · linke tıkla → açılan issue'da <i>Create</i>'e bas → birkaç saniye içinde hasarın README'ye yansır</p>
-
-<!--END_SECTION:boss-->
-
----
-
-## ♟️ Satranç Oyna
-
-> Herkesin oynadığı tek bir oyun var. Sırası gelen tarafın hamlesini sen yap; tahta otomatik güncellenir. Üst üste iki hamle yapamazsın, bir arkadaşını çağır!
-
-<!--START_SECTION:chess-->
-<p align="center"><img src="https://raw.githubusercontent.com/ardacey/ardacey/main/assets/chess.svg?v=1793002946" width="400" alt="Satranç tahtası"/></p>
-
-**Sıra: ⚪ Beyaz** · Oynanan hamle: 0 · Biten oyun: 0
-
-<details><summary><b>♟️ Hamle yap (20 legal hamle)</b></summary>
-
-Bir hamleye tıkla → açılan issue'da **Create**'e bas.
-
-| Taş | Gidebileceği kareler |
-|---|---|
-| ♙ a2 | [a3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20a2a3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [a4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20a2a4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♘ b1 | [c3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20b1c3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [a3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20b1a3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ b2 | [b3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20b2b3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [b4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20b2b4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ c2 | [c3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20c2c3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [c4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20c2c4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ d2 | [d3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20d2d3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [d4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20d2d4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ e2 | [e3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20e2e3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [e4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20e2e4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ f2 | [f3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20f2f3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [f4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20f2f4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♘ g1 | [h3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20g1h3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [f3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20g1f3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ g2 | [g3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20g2g3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [g4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20g2g4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-| ♙ h2 | [h3](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20h2h3&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) · [h4](https://github.com/ardacey/ardacey/issues/new?title=chess%3A%20h2h4&body=Sadece%20asagidaki%20%27Create%27%20/%20%27Submit%20new%20issue%27%20butonuna%20bas.%20Gerisini%20bot%20halleder.) |
-
-</details>
-
-<!--END_SECTION:chess-->
 
 ---
 
